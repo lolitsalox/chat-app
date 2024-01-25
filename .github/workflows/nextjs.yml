@@ -34,11 +34,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Store variables
         run: |
-          echo {"REACT_APP_NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }}"} >> $GITHUB_ENV
-          echo "REACT_APP_UPSTASH_REDIS_REST_URL=${{ secrets.UPSTASH_REDIS_REST_URL }}" >> $GITHUB_ENV
-          echo "REACT_APP_UPSTASH_REDIS_REST_TOKEN=${{ secrets.UPSTASH_REDIS_REST_TOKEN }}" >> $GITHUB_ENV
-          echo "REACT_APP_GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}" >> $GITHUB_ENV
-          echo "REACT_APP_GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}" >> $GITHUB_ENV
+          echo {"NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }}"} >> $GITHUB_ENV
+          echo "UPSTASH_REDIS_REST_URL=${{ secrets.UPSTASH_REDIS_REST_URL }}" >> $GITHUB_ENV
+          echo "UPSTASH_REDIS_REST_TOKEN=${{ secrets.UPSTASH_REDIS_REST_TOKEN }}" >> $GITHUB_ENV
+          echo "GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}" >> $GITHUB_ENV
+          echo "GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}" >> $GITHUB_ENV
       - name: Detect package manager
         id: detect-package-manager
         run: |
